@@ -1,0 +1,184 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <form action="SignupLogin.php" method="POST">
+  Name: <input type="text" name="uname"><br>
+  Email id: <input type="text" name="uemail"><br>
+  Password: <input type="password" name="upwd"><br>
+  Phone No: <input type="number" name="uphno" id=""><br>
+  Blood Type: <input type="text" name="ubloodtype"><br>
+  Address: <input type="text" name="uaddress"><br>
+  Age: <input type="number" name="uage" ><br>
+  <input type="submit" value="Signup" name="signup">
+ </form>
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- Style -->
+   <style>
+    body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff; }
+
+p {
+  color: #b3b3b3;
+  font-weight: 300; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto", sans-serif; }
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  a:hover {
+    text-decoration: none !important; }
+
+
+
+h2 {
+  font-size: 20px; }
+
+.half, .half .container > .row {
+  height: 100vh;
+  min-height: 700px; }
+
+@media (max-width: 991.98px) {
+  .half .bg {
+    height: 200px; } }
+
+.half .contents {
+  background: #f6f7fc; }
+
+.half .contents, .half .bg {
+  width: 50%; }
+  @media (max-width: 1199.98px) {
+    .half .contents, .half .bg {
+      width: 100%; } }
+  .half .contents .form-control, .half .bg .form-control {
+    border: none;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    /* height: 54px; */
+    background: #fff; }
+    .half .contents .form-control:active, .half .contents .form-control:focus, .half .bg .form-control:active, .half .bg .form-control:focus {
+      outline: none;
+      -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+
+.half .bg {
+  background-size: cover;
+  background-position: center; }
+
+.half a {
+  color: #888;
+  text-decoration: underline; }
+
+
+  /* height: 54px; */
+
+
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 14px; }
+  .control .caption {
+    position: relative;
+    /* top: .2rem; */
+    color: #888; }
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0; }
+
+
+   </style>
+
+    <title>Login #2</title>
+  </head>
+  <body>
+  
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('https://qtxasset.com/styles/breakpoint_sm_default_480px_w/s3/fiercehealthcare/1582741956/GettyImages-938754444.jpg/GettyImages-938754444.jpg?T7veAipGbA1FBbqUd17l1XgsuK.YIg1U&itok=1yZhRI9e');"></div>
+    <div class="contents order-2 order-md-1">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7">
+            <h3>Sign Up <strong style="color: orangered;">Raksha</strong></h3>
+    
+            <form action="SignupLogin.php" method="POST">
+        
+          
+                <label for="username" class="mt-2">Name:</label>
+                 <input type="text" class="form-control" name="uname" placeholder="your name">
+         
+             
+               <label for="username" class="mt-2">Email id:</label>
+                <input type="text" class="form-control" name="uemail" placeholder="your name">
+             
+        
+               <label for="password" class="mt-2">Password</label>
+               <input type="password" class="form-control" placeholder="Your Password" name="lpwd">
+        
+         
+              <label for="username" class="mt-2"> Phone No:</label>
+               <input type="number" class="form-control" name="uphno" placeholder="your ph no">
+       
+            <div class=" ">
+             <label for="username" class="mt-2">Blood Type:</label>
+              <input type="text" class="form-control" name="ubloodtype" placeholder="your blood type">
+           </div>
+      
+            <label for="username" class="mt-2"> Address:</label>
+             <input type="text" class="form-control"  name="uaddress" placeholder="your address">
+      
+      
+           <label for="username" class="mt-2"> Age:</label>
+            <input class="form-control"  type="number" name="uage" placeholder="your age"><br>
+     
+        
+
+              <input type="submit" value="Signup" name="signup" class="btn btn-block btn-primary">
+
+            </form>
+            <div class="text-center mt-2">
+            <a href="Login.html">Already a Memeber? Login</a>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+    
+    
+
+ 
+  </body>
+</html>

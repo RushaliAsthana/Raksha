@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8" />
+ <title>Display a map</title>
+ <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+ <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+ <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet" />
+ <style>
+  body {
+   margin: 0;
+   padding: 0;
+  }
+
+  #map {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   width: 100%;
+  }
+ </style>
+</head>
+
+<body>
+ <div id="map"></div>
+ <script>
+  // TO MAKE THE MAP APPEAR YOU MUST
+  // ADD YOUR ACCESS TOKEN FROM
+  // https://account.mapbox.com
+  mapboxgl.accessToken = 'pk.eyJ1IjoicXVpY2toYXdrIiwiYSI6ImNrazVidTBreTAzenQyc29hZzVzaGhhYm0ifQ.EW4dmHaAG41a4jgYlSMjHg';
+  var map = new mapboxgl.Map({
+   container: 'map', // container id
+   style: 'mapbox://styles/mapbox/streets-v11', // style URL
+   center: [78.4878493, 17.3971932], // starting position [lng, lat]
+   zoom: 16 // starting zoom
+  });
+
+  map.on('load', function () {
+   map.addSource('route', {
+    'type': 'geojson',
+    'data': {
+     'type': 'Feature',
+     'properties': {},
+     'geometry': {
+      'type': 'LineString',
+      'coordinates': 
+       [
+        [
+         78.48785,
+         17.397204
+        ],
+        [
+         78.488259,
+         17.397174
+        ],
+        [
+         78.488361,
+         17.397235
+        ],
+        [
+         78.488531,
+         17.3977
+        ],
+        [
+         78.4885,
+         17.397882
+        ],
+        [
+         78.488023,
+         17.398229
+        ],
+        [
+         78.487356,
+         17.398615
+        ],
+        [
+         78.485848,
+         17.39894
+        ],
+        [
+         78.485816,
+         17.398972
+        ],
+        [
+         78.484423,
+         17.398096
+        ],
+        [
+         78.483585,
+         17.397492
+        ],
+        [
+         78.483506,
+         17.397483
+        ],
+        [
+         78.482643,
+         17.398014
+        ],
+        [
+         78.482207,
+         17.398337
+        ],
+        [
+         78.481475,
+         17.39873
+        ]
+       ]
+     }
+    }
+   });
+   map.addLayer({
+    'id': 'route',
+    'type': 'line',
+    'source': 'route',
+    'layout': {
+     'line-join': 'round',
+     'line-cap': 'round'
+    },
+    'paint': {
+     'line-color': 'orangered',
+     'line-width': 8
+    }
+   });
+  });
+
+ </script>
+
+</body>
+
+</html>
