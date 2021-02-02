@@ -211,11 +211,11 @@ function makeCardBody(details)
   div2.innerHTML+="<img src='"+details.img_driver+"' class='img-fluid'>";
   div3.innerHTML+="<div><b>Driver Id:</b> "+details.did+"</div>";
   div3.innerHTML+="<div><b>Driver Name: </b>"+details.driver_name+"</div>";
-  div3.innerHTML+="<div>Ph No:"+details.phone_no+"</div>";
-  div3.innerHTML+="<div>Email:"+details.email_id+"</div>";
+  div3.innerHTML+="<div><b>Ph No:"+details.phone_no+"</b></div>";
+  div3.innerHTML+="<div><b>Email:"+details.email_id+"</b></div>";
   div4.innerHTML+="<div><b>Ambulance Name: </b>"+details.ambulance_name+"</div>";
   div4.innerHTML+="<div><b>Ambulance No:</b> "+details.no_plate+"</div>";
-  div4.innerHTML+="<div>Type:"+details.type+"</div>";
+  div4.innerHTML+="<div><b>Type:"+details.type+"</b></div>";
   div4.appendChild(editBtn(details.did));
   div4.appendChild(removeBtn(details.did));
 
